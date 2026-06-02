@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #ef4444;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-primary text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95;
+  }
+
+  .glass-nav {
+    @apply sticky top-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-100 z-50 transition-all duration-300;
+  }
+}
+
+body {
+  @apply text-slate-900 antialiased;
+}
